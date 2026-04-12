@@ -3752,12 +3752,21 @@ a {
   }
 
   .fixed-side-cta__btn--ig {
-    display: none;
+    display: inline-flex;
+    flex: 0 0 58px;
+    width: 58px;
+    min-height: 58px;
+    border-radius: 50%;
   }
 
   .fixed-side-cta__icon--ig {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .fixed-side-cta__btn--ig .fixed-side-cta__subcopy,
+  .fixed-side-cta__btn--ig .fixed-side-cta__label {
+    display: none;
   }
 
   .page-top {
