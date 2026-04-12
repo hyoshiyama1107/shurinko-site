@@ -3692,8 +3692,9 @@ a {
     right: 12px;
     top: auto;
     bottom: calc(12px + env(safe-area-inset-bottom, 0));
-    flex-direction: row;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 58px;
+    justify-content: stretch;
     align-items: stretch;
     gap: 8px;
   }
@@ -3752,11 +3753,13 @@ a {
   }
 
   .fixed-side-cta__btn--ig {
-    display: inline-flex;
+    display: inline-flex !important;
     flex: 0 0 58px;
     width: 58px;
     min-height: 58px;
     border-radius: 50%;
+    justify-self: stretch;
+    align-self: stretch;
   }
 
   .fixed-side-cta__icon--ig {
