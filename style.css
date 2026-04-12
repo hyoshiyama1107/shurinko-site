@@ -978,6 +978,26 @@ a {
 }
 
 @media (max-width: 768px) {
+  .first-guide .first-guide__steps-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  .first-guide .first-step-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+
+  .first-guide .first-step-card h3,
+  .first-guide .first-step-card p {
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: anywhere;
+    writing-mode: horizontal-tb;
+  }
+
   .concept-main__grid {
     grid-template-columns: 1fr;
     width: min(100% - 24px, var(--container));
@@ -1009,8 +1029,8 @@ a {
   }
 
   .first-guide__steps-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 0.85rem;
   }
 
@@ -3274,6 +3294,26 @@ a {
     font-size: 16px;
   }
 
+  .first-guide .first-guide__steps-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  .first-guide .first-step-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+
+  .first-guide .first-step-card h3,
+  .first-guide .first-step-card p {
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: anywhere;
+    writing-mode: horizontal-tb;
+  }
+
   body:not(.subpage) {
     padding-bottom: calc(90px + env(safe-area-inset-bottom, 0));
   }
@@ -3417,8 +3457,8 @@ a {
   }
 
   .first-guide__steps-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 0.75rem;
   }
 
