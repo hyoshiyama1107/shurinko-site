@@ -3692,6 +3692,7 @@ a {
     right: 12px;
     top: auto;
     bottom: calc(12px + env(safe-area-inset-bottom, 0));
+    z-index: 290;
     display: grid;
     grid-template-columns: minmax(0, 1fr) 58px;
     justify-content: stretch;
@@ -3774,7 +3775,7 @@ a {
 
   .page-top {
     right: 12px;
-    bottom: calc(78px + env(safe-area-inset-bottom, 0));
+    bottom: calc(132px + env(safe-area-inset-bottom, 0));
     width: 52px;
     height: 52px;
     font-size: 0;
