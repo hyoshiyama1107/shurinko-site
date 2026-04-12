@@ -985,8 +985,8 @@ a {
   }
 
   .first-guide .first-guide__support {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
     gap: 0.85rem !important;
   }
 
@@ -3313,8 +3313,8 @@ a {
   }
 
   .first-guide .first-guide__support {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
     gap: 0.75rem !important;
   }
 
