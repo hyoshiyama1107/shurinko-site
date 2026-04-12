@@ -1001,7 +1001,6 @@ a {
   }
 
   .empathy-grid,
-  .first-guide__steps-grid,
   .first-guide__support,
   .menu-feature__pricing,
   .style-cases__grid,
@@ -1009,9 +1008,20 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .first-guide__steps-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
   .first-step-card,
   .first-guide__support-card {
     padding: 1.35rem 1.2rem;
+  }
+
+  .first-step-card {
+    width: 100%;
+    min-width: 0;
   }
 
   .first-step-card::after {
@@ -3400,17 +3410,27 @@ a {
   }
 
   .empathy-grid,
-  .first-guide__steps-grid,
   .first-guide__support,
   .menu-feature__pricing,
   .reassurance-grid {
     gap: 0.8rem;
   }
 
+  .first-guide__steps-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
   .empathy-card,
   .first-step-card,
   .first-guide__support-card {
     padding: 1rem 0.95rem;
+  }
+
+  .first-step-card {
+    width: 100%;
+    min-width: 0;
   }
 
   .first-step-card__num {
