@@ -984,7 +984,19 @@ a {
     gap: 0.85rem !important;
   }
 
+  .first-guide .first-guide__support {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
   .first-guide .first-step-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+
+  .first-guide .first-guide__support-card {
     width: 100% !important;
     min-width: 0 !important;
     max-width: none !important;
@@ -3300,7 +3312,19 @@ a {
     gap: 0.75rem !important;
   }
 
+  .first-guide .first-guide__support {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+
   .first-guide .first-step-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+
+  .first-guide .first-guide__support-card {
     width: 100% !important;
     min-width: 0 !important;
     max-width: none !important;
