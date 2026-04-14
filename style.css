@@ -3256,6 +3256,10 @@ a {
   display: none;
 }
 
+.mobile-bottom-cta {
+  display: none;
+}
+
 .floating-cta-nav {
   isolation: isolate;
 }
@@ -3851,9 +3855,13 @@ a {
   }
 
   .fixed-side-cta {
+    display: none;
+  }
+
+  .mobile-bottom-cta {
+    position: fixed;
     left: 12px;
     right: 12px;
-    top: auto;
     bottom: calc(12px + env(safe-area-inset-bottom, 0));
     z-index: 290;
     display: grid;
@@ -3862,109 +3870,50 @@ a {
     align-items: stretch;
   }
 
-  .fixed-side-cta__btn {
+  .mobile-bottom-cta__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.42rem;
     min-height: 50px;
-    border-radius: 14px;
-    box-shadow: 0 12px 24px rgba(51, 62, 72, 0.14);
-  }
-
-  .fixed-side-cta__btn--line {
-    width: 100%;
     padding: 0.7rem 0.72rem;
-    flex-direction: row;
-    justify-content: center;
-    gap: 0.38rem;
-    background: var(--color-line);
-    color: var(--color-white);
-    border-color: rgba(6, 199, 85, 0.92);
-  }
-
-  .fixed-side-cta__btn--line .fixed-side-cta__line-top {
-    flex: 0 0 22px;
-    width: 22px;
-    min-height: 22px;
-    padding: 0;
-    border-radius: 999px;
-    background: var(--color-white);
-  }
-
-  .fixed-side-cta__btn--line .fixed-side-cta__line-top::after {
-    display: none;
-  }
-
-  .fixed-side-cta__btn--line .fixed-side-cta__line-bubble {
-    width: 12px;
-    height: 12px;
-    margin-top: 0;
-    font-size: 0;
-    color: transparent;
-    background: var(--color-line);
-  }
-
-  .fixed-side-cta__btn--line .fixed-side-cta__line-bubble::after {
-    right: 1px;
-    bottom: -2px;
-    width: 5px;
-    height: 5px;
-    background: var(--color-line);
-  }
-
-  .fixed-side-cta__btn--line .fixed-side-cta__body {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 0;
-  }
-
-  .fixed-side-cta__btn--line .fixed-side-cta__subcopy {
-    display: none;
-  }
-
-  .fixed-side-cta__btn--line .fixed-side-cta__label {
-    display: inline-flex;
-    align-items: center;
-    margin: 0;
-    color: var(--color-white);
+    border-radius: 14px;
+    text-decoration: none;
     font-size: 0.79rem;
     font-weight: 700;
     letter-spacing: 0.01em;
     line-height: 1;
     white-space: nowrap;
+    box-shadow: 0 12px 24px rgba(51, 62, 72, 0.14);
   }
 
-  .fixed-side-cta__btn--ig {
-    display: inline-flex !important;
-    width: 100%;
-    min-height: 50px;
-    padding: 0.7rem 0.72rem;
-    justify-content: center;
-    align-items: center;
-    gap: 0.36rem;
-    border-radius: 14px;
+  .mobile-bottom-cta__btn--line {
+    background: var(--color-line);
     color: var(--color-white);
-    border-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(6, 199, 85, 0.92);
+  }
+
+  .mobile-bottom-cta__btn--ig {
     background: linear-gradient(135deg, #ee5c47 0%, #d4377b 52%, #8d36c9 100%);
-  }
-
-  .fixed-side-cta__btn--ig .fixed-side-cta__icon--ig {
-    width: 20px;
-    height: 20px;
     color: var(--color-white);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  .fixed-side-cta__btn--ig .fixed-side-cta__subcopy {
-    display: none;
+  .mobile-bottom-cta__icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    background: currentColor;
   }
 
-  .fixed-side-cta__btn--ig .fixed-side-cta__label {
-    display: inline-flex;
-    align-items: center;
-    margin: 0;
-    font-size: 0.77rem;
-    font-weight: 700;
-    letter-spacing: 0.01em;
-    line-height: 1;
-    white-space: nowrap;
+  .mobile-bottom-cta__icon--line {
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.282.629-.631.629-.346 0-.627-.285-.627-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.137h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314'/%3E%3C/svg%3E") center / contain no-repeat;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.282.629-.631.629-.346 0-.627-.285-.627-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.137h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
+
+  .mobile-bottom-cta__icon--ig {
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z'/%3E%3C/svg%3E") center / contain no-repeat;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z'/%3E%3C/svg%3E") center / contain no-repeat;
   }
 
   .page-top {
