@@ -3354,7 +3354,7 @@ a {
   }
 
   body:not(.subpage) {
-    padding-bottom: calc(170px + env(safe-area-inset-bottom, 0));
+    padding-bottom: calc(132px + env(safe-area-inset-bottom, 0));
   }
 
   .section__title-center {
@@ -3699,30 +3699,29 @@ a {
   }
 
   body.subpage {
-    padding-bottom: calc(170px + env(safe-area-inset-bottom, 0));
+    padding-bottom: calc(132px + env(safe-area-inset-bottom, 0));
   }
 
   .fixed-side-cta {
-    left: auto;
+    left: 12px;
     right: 12px;
     top: auto;
-    bottom: calc(18px + env(safe-area-inset-bottom, 0));
+    bottom: calc(12px + env(safe-area-inset-bottom, 0));
     z-index: 290;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: stretch;
-    width: 124px;
     gap: 10px;
   }
 
   .fixed-side-cta__btn--line {
-    width: 124px;
-    min-height: 58px;
+    width: 100%;
+    min-height: 54px;
     border-radius: 18px;
     flex-direction: row;
     justify-content: center;
     gap: 0.55rem;
-    padding: 0.7rem 0.75rem;
+    padding: 0.75rem 0.8rem;
     background: #ffffff;
     color: #06c755;
     box-shadow: 0 14px 28px rgba(51, 62, 72, 0.16);
@@ -3760,7 +3759,7 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    flex: 0 1 auto;
+    flex: 1 1 auto;
     min-width: 0;
   }
 
@@ -3769,7 +3768,7 @@ a {
     align-items: center;
     margin: 0;
     gap: 0.18rem;
-    font-size: 0.88rem;
+    font-size: 0.84rem;
     font-weight: 700;
     letter-spacing: 0.04em;
     line-height: 1;
@@ -3786,8 +3785,8 @@ a {
 
   .fixed-side-cta__btn--ig {
     display: inline-flex !important;
-    width: 124px;
-    min-height: 50px;
+    width: 100%;
+    min-height: 54px;
     border-radius: 18px;
     justify-content: center;
     gap: 0.5rem;
@@ -3815,7 +3814,7 @@ a {
 
   .page-top {
     right: 12px;
-    bottom: calc(146px + env(safe-area-inset-bottom, 0));
+    bottom: calc(84px + env(safe-area-inset-bottom, 0));
     width: 48px;
     height: 48px;
     font-size: 0;
